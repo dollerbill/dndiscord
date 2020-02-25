@@ -1,0 +1,39 @@
+# == Schema Information
+#
+# Table name: monsters
+#
+#  id         :bigint           not null, primary key
+#  name       :string           not null
+#  status     :string
+#  alive      :boolean          default("true"), not null
+#  attack     :integer          not null
+#  xp_awarded :integer          not null
+#  created_at :datetime         not null
+#  updated_at :datetime         not null
+#
+
+one:
+  name: MyString
+  current_hp: 1
+  max_hp: 1
+  attack: 1
+  status: MyString
+  Player: MyString
+  name: MyString
+  class: MyString
+  current_hp: 1
+  max_hp: 1
+  status: MyString
+
+two:
+  name: MyString
+  current_hp: 1
+  max_hp: 1
+  attack: 1
+  status: MyString
+  Player: MyString
+  name: MyString
+  class: MyString
+  current_hp: 1
+  max_hp: 1
+  status: MyString
