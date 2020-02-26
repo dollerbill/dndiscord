@@ -15,4 +15,5 @@
 #  updated_at :datetime         not null
 #
 class Player < ApplicationRecord
+  has_one :stat
 end

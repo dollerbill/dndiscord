@@ -18,4 +18,6 @@
 #  updated_at   :datetime         not null
 #
 class Stat < ApplicationRecord
+  belongs_to :monster
+  belongs_to :player
 end

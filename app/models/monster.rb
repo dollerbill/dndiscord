@@ -12,4 +12,5 @@
 #  updated_at :datetime         not null
 #
 class Monster < ApplicationRecord
+  has_one :stat
 end
