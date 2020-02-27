@@ -3,7 +3,7 @@ class CreatePlayers < ActiveRecord::Migration[6.0]
     create_table :players do |t|
       t.string :name, null: false
       t.string :gender, null: false
-      t.string :class, null: false
+      t.string :character_class, null: false
       t.string :status
       t.string :alignment
       t.string :background

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20_200_225_051_009) do
+ActiveRecord::Schema.define(version: 20_200_227_045_112) do
   # These are extensions that must be enabled in order to support this database
   enable_extension 'plpgsql'
 
@@ -27,7 +27,7 @@ ActiveRecord::Schema.define(version: 20_200_225_051_009) do
   create_table 'players', force: :cascade do |t|
     t.string 'name', null: false
     t.string 'gender', null: false
-    t.string 'class', null: false
+    t.string 'character_class', null: false
     t.string 'status'
     t.string 'alignment'
     t.string 'background'
@@ -53,5 +53,11 @@ ActiveRecord::Schema.define(version: 20_200_225_051_009) do
     t.datetime 'updated_at', precision: 6, null: false
     t.index ['monster_id'], name: 'index_stats_on_monster_id'
     t.index ['player_id'], name: 'index_stats_on_player_id'
+  end
+
+  create_table 'weapons', force: :cascade do |t|
+    t.string 'name'
+    t.datetime 'created_at', precision: 6, null: false
+    t.datetime 'updated_at', precision: 6, null: false
   end
 end

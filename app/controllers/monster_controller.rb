@@ -16,22 +16,15 @@ class MonsterController < ApplicationController
     @monster = Monster.new(monster_params)
 
     if @monster.save
-      redirect_to :action => 'list'
+      redirect_to action: 'list'
     else
       @subjects = Subject.all
-      render :action => 'new'
+      render action: 'new'
     end
-
   end
 
   def monster_params
-    #params.require(:monsters).permit(:name, :status, :alive, :attack, :xp_awarded)
-    params.require(:name)
-    params.require(:status)
-    params.require(:alive)
-    params.require(:attack)
-    params.require(:xp_awarded)
-
+    params.require(:monsters).permit(:name, :status, :alive, :attack, :xp_awarded)
   end
 
   def edit
@@ -43,15 +36,15 @@ class MonsterController < ApplicationController
     @monster = Monster.find(params[:id])
 
     if @monster.update_attributes(book_param)
-      redirect_to :action => 'show', :id => @monster
+      redirect_to action: 'show', id: @monster
     else
       @subjects = Subject.all
-      render :action => 'edit'
+      render action: 'edit'
     end
   end
 
   def delete
     Monster.find(params[:id]).destroy
-    redirect_to :action => 'list'
+    redirect_to action: 'list'
   end
 end
